@@ -1,4 +1,5 @@
 const pi = require('../lib/personalityInsights');
+const chooseHouse = require('../lib/chooseHouse')
 
 function getPersonality(req, res, next) {
     const { content } = req.body;
@@ -7,7 +8,7 @@ function getPersonality(req, res, next) {
         content_type: 'text/plain'
     }, (err, watsonData) => {
         if (err) next(err);
-        else res.send(watsonData);
+        else res.send(chooseHouse(watsonData));
     })
 }
 

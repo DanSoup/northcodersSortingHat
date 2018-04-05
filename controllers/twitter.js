@@ -20,7 +20,6 @@ const scrapeTweets = (req, res, next) => {
       }, '');
       req.body = { content: allTweets };
       getPersonality(req, res, next);
-      console.log(allTweets);
     })
 
 }
