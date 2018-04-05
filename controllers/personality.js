@@ -1,7 +1,7 @@
 const pi = require('../lib/personalityInsights');
 
-function getPersonality (req, res, next) {
-    const {content} = req.body;
+function getPersonality(req, res, next) {
+    const { content } = req.body;
     pi.profile({
         content,
         content_type: 'text/plain'
