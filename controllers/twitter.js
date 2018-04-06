@@ -1,5 +1,10 @@
 const Twit = require('twit');
-const keysTokens = require('../config/twitterCredentials.js');
+const {consumer_key, consumer_secret, access_token, access_token_secret} = process.env;
+if (consumer_key === undefined) {
+  const keysTokens = require('../config/twitterCredentials.js');
+} else {
+  const keysTokens = {consumer_key, consumer_secret, access_token, access_token_secret}
+}
 const getPersonality = require('./personality');
 
 const scrapeTweets = (req, res, next) => {
