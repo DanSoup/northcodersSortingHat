@@ -1,7 +1,10 @@
 const Twit = require('twit');
-const {consumer_key, consumer_secret, access_token, access_token_secret} = process.env;
+let consumer_key = process.env.consumer_key;
+let consumer_secret = process.env.consumer_secret
+let access_token = process.env.access_token
+let access_token_secret = process.env.access_token_secret;
 if (consumer_key === undefined) {
-  const keysTokens = require('../config/twitterCredentials.js');
+  keysTokens = require('../config/twitterCredentials.js');
 } else {
   const keysTokens = {consumer_key, consumer_secret, access_token, access_token_secret}
 }
