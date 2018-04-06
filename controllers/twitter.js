@@ -3,7 +3,7 @@ let consumer_key = process.env.consumer_key;
 let consumer_secret = process.env.consumer_secret
 let access_token = process.env.access_token
 let access_token_secret = process.env.access_token_secret;
-const keysTokens = {};
+let keysTokens = {};
 if (consumer_key === undefined) {
   keysTokens = require('../config/twitterCredentials.js');
 } else {
