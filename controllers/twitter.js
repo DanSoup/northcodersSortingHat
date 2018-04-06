@@ -4,7 +4,8 @@ const getPersonality = require('./personality');
 
 const scrapeTweets = (req, res, next) => {
   const T = new Twit(keysTokens);
-  const { handle } = req.params;
+  console.log(req.query);
+  const { handle } = req.query;
 
   T.get('statuses/user_timeline', {
     screen_name: handle,
