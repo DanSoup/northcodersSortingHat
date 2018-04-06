@@ -8,7 +8,7 @@ const scrapeTweets = (req, res, next) => {
 
   T.get('statuses/user_timeline', {
     screen_name: handle,
-    count: 50,
+    count: 200,
     trim_user: true,
     include_rts: false,
     exclude_replies: false

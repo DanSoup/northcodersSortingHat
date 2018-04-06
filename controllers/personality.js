@@ -8,7 +8,7 @@ function getPersonality(req, res, next) {
         content_type: 'text/plain'
     }, (err, watsonData) => {
         if (err) next(err);
-        else res.send(chooseHouse(watsonData));
+        else res.render('home.ejs', chooseHouse(watsonData));
     })
 }
 
